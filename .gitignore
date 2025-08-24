@@ -1,0 +1,40 @@
+# Arquivos de IDE e Sistema
+.idea/
+.DS_Store
+.project
+.classpath
+.settings/
+*.iml
+
+# Compilação e Build do Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Logs e Relatórios
+*.log
+log/
+html-reports/
+allure-results/
+cucumber-html-reports/
+test-output/
+
+# Arquivos de Configuração com Credenciais (muito importante!)
+.env
+
+# Outros
+tmp/
+*.tmp
+*.class
+*.jar
+*.war
+*.zip
+*.tar
+*.rar
