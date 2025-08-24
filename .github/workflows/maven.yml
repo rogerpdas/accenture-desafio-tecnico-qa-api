@@ -43,7 +43,12 @@ jobs:
       - name: Run tests with Maven
         run: mvn clean test -B
 
-
+      # 6. Salvar relatórios do Cucumber como artifact
+      - name: Upload Cucumber Reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: cucumber-reports
+          path: target/html-reports
 
 
       # 6. Publicar report do Cucumber no GitHub Pages
