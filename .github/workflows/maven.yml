@@ -45,10 +45,9 @@ jobs:
 
       # 6. Publicar report do Cucumber no GitHub Pages
       - name: Deploy Cucumber Report to GitHub Pages
-        if: success() || failure()  # publica mesmo se houver falhas nos testes
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GH_PAGES_TOKEN }}
           publish_dir: ./target/html-reports
 
       # 7. Exibir URL do report no log
