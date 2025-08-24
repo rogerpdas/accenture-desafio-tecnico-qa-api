@@ -53,5 +53,10 @@ public class Hooks {
         if(ReportUtil.getResponseReport("GetUserDetails") != null){
             scenario.attach("Detalhe:"+ ReportUtil.getResponseReport("GetUserDetails").asString(), "text/plain", "Response: UserDetails");
         }
+
+        /*
+        * Teste de CI/CD
+        * */
+
     }
 }
