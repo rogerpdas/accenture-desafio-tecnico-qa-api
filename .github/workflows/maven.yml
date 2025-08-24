@@ -43,20 +43,23 @@ jobs:
       - name: Run tests with Maven
         run: mvn clean test -B
 
+
+
+
       # 6. Publicar report do Cucumber no GitHub Pages
-      - name: Deploy Cucumber Report to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GH_PAGES_TOKEN }}
-          publish_dir: ./target/html-reports
+      #- name: Deploy Cucumber Report to GitHub Pages
+      #  uses: peaceiris/actions-gh-pages@v3
+      #  with:
+      #    github_token: ${{ secrets.GH_PAGES_TOKEN }}
+      #    publish_dir: ./target/html-reports
 
       # 7. Exibir URL do report no log
-      - name: Cucumber Report URL
-        run: |
-          echo "O relatório do Cucumber estará disponível em: https://$GITHUB_REPOSITORY_OWNER.github.io/$GITHUB_REPOSITORY/cucumber.html"
-        env:
-          GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
-          GITHUB_REPOSITORY: ${{ github.event.repository.name }}
+      #- name: Cucumber Report URL
+      #  run: |
+      #    echo "O relatório do Cucumber estará disponível em: https://$GITHUB_REPOSITORY_OWNER.github.io/$GITHUB_REPOSITORY/cucumber.html"
+      #  env:
+      #    GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
+      #    GITHUB_REPOSITORY: ${{ github.event.repository.name }}
 
 
 
